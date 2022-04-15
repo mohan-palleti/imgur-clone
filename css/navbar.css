@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
     color: whitesmoke;
 }
 #main{
@@ -12,7 +13,8 @@ body{
     display: flex;
     justify-content: space-between;
     /* border: 1px solid red; */
-    position: sticky;
+    position: fixed;
+    background-color: #191948;
     
 }
 #imgdiv {
@@ -22,7 +24,7 @@ body{
 }
 #imgdiv img{
     width: 100%;
-    height: 74%;
+    height: 90%;
     margin-top: 10px;
 }
 #searchdiv{
