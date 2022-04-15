@@ -1,7 +1,9 @@
-async function Getdata() {
+
+async function searchImages() {
+    let search = document.getElementById("searchbar").value;
     try {
       let res = await fetch(
-        "https://api.imgur.com/3/gallery/hot/viral/month/2?showViral=true&mature=true&album_previews=true",
+        `https://api.imgur.com/3/gallery/search/viral/month/4?q=${search}`,
         {
           method: "GET", // or 'PUT'
           headers: {
@@ -10,9 +12,39 @@ async function Getdata() {
         }
       );
       let data = await res.json();
-      //console.log(data);
-      appendData(data.data);
+      let list = data.data;
+      console.log(list);
+      appendData(list);
     } catch (err) {
       console.log(err);
     }
   }
+
+  function appendData(list) {
+      document.getElementById("displayImage").innerHTML="";
+      if(list === undefined) return false;
+      list.map(function(e) {
+          let p = document.createElement("p");
+          p.innerHTML = e.tags[0].name;
+          p.style.color="yellow";
+        //   p.addEventListener("click", function() {
+        //       appendImages(elem)
+        //   })
+          document.getElementById("displayImage").append(p);
+      })
+  }
+
+  let searchimg;
+  function debounce(func,delay){
+      if(searchimg){
+          clearTimeout(searchimg);
+      }
+      searchimg=setTimeout(function(){
+          func();
+      },delay)
+  }
+
+//   function appendImages(elem){
+//       let img = document.createElement("img");
+//      // img.src = elem.
+//   }

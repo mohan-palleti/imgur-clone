@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    color: whitesmoke;
 }
 #main{
     background-image: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png");
@@ -10,23 +11,23 @@ body{
     margin: auto;
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: sticky;
     
 }
 #imgdiv {
     width: 10%;
     height: 49px;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 #imgdiv img{
     width: 100%;
-    height: 76%;
+    height: 74%;
     margin-top: 10px;
 }
 #searchdiv{
     width: 40%;
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
 }
 #searchbar{
     width: 100%;
@@ -38,6 +39,33 @@ body{
 }
 #logindiv a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 18px;
+}
+#displayImage{
+    height: 250px;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+#belowdiv h3 {
+    text-align: center;
+}
+#belowdiv h5{
+    margin-left: 105px;
+}
+#explore{
+    width: 80%;
+    height: 180px;
+    margin: auto;
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+#explore>div img{
+    height: 99px;
+    width: 90%;
+}
+#explore>div h5{
+    margin-left: 5px;
+    margin-top: 1px;
 }
